@@ -6,6 +6,7 @@ from .permission import IsSelf
 
 User = get_user_model()
 
+
 class UserViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer
 

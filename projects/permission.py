@@ -11,10 +11,7 @@ class IsProjectContributor(BasePermission):
         # Handle Project case
         project = getattr(obj, "project", obj)
 
-        return Contributor.objects.filter(
-            user=request.user,
-            project=project
-        ).exists()
+        return Contributor.objects.filter(user=request.user, project=project).exists()
 
 
 class IsAuthorOrReadOnly(BasePermission):

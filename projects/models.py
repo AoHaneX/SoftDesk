@@ -2,6 +2,7 @@ from django.conf import settings
 from django.db import models
 import uuid
 
+
 class Project(models.Model):
     class ProjectType(models.TextChoices):
         BACK_END = "BACK_END", "Back-end"
@@ -41,7 +42,8 @@ class Contributor(models.Model):
 
     def __str__(self):
         return f"{self.user.username} - {self.project.title}"
-    
+
+
 class Issue(models.Model):
     class TagChoices(models.TextChoices):
         BUG = "BUG", "Bug"

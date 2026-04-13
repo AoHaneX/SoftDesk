@@ -2,7 +2,6 @@ from rest_framework import serializers
 from .models import Project, Contributor, Issue, Comment
 
 
-# TRransforme les instances de Project et Contributor en JSON et inversement, pour les API REST.
 class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Project
